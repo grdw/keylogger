@@ -51,7 +51,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler (>= 2.2.10)
+  bundler (~> 2.2)
   keylogger!
   pry (~> 0.13)
   rake (~> 13.0)

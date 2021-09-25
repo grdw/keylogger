@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["gerard@grdw.nl"]
 
   spec.summary       = "A basic keylogger"
-  spec.description   = "A basic keylogger"
+  spec.description   = "A basic keylogger for linux"
   spec.homepage      = "https://github.com/grdw/keylogger"
   spec.license       = "MIT"
 
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", ">= 2.2.10"
+  spec.add_development_dependency "bundler", "~> 2.2"
   spec.add_development_dependency "pry", "~> 0.13"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
