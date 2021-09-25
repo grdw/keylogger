@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    keylogger (0.0.1)
+    keylogger (0.0.2)
 
 GEM
   remote: https://rubygems.org/
