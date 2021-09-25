@@ -1,7 +1,11 @@
 class Keylogger
   module InputDevices
     KEYBOARD_EV = "120013".freeze
-    DEVICE_REGEX = /N: Name="(?<name>.+)"(\n|.)*H: Handlers=.*event(?<event_id>[0-9]+).*(\n|.)*B: EV=(?<ev>[0-9]+)/.freeze
+    DEVICE_REGEX = /
+      N:\sName="(?<name>.+)"(\n|.)*
+      H:\sHandlers=.*event(?<event_id>[0-9]+).*(\n|.)*
+      B:\sEV=(?<ev>[0-9]+)
+    /x.freeze
 
     Device = Struct.new(:name, :event_id, :ev, keyword_init: true)
 
@@ -10,8 +14,6 @@ class Keylogger
         device.name == name && device.ev == KEYBOARD_EV
       end
     end
-
-    private
 
     def self.devices
       @devices ||= begin

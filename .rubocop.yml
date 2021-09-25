@@ -1,0 +1,16 @@
+AllCops:
+  NewCops: disable
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+# This is causing breaking changes:
+Style/ExpandPathArguments:
+  Enabled: false
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

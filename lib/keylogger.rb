@@ -1,6 +1,8 @@
 class Keylogger
   SUPPORTED_PLATFORMS = %w[x86_64-linux x86_64-linux-gnu].freeze
   FORMAT = "l!<l!<HHI!<".freeze
+  MIN_ID = 0
+  MAX_ID = 59
 
   DeviceNotFoundError = Class.new(StandardError)
   WrongPlatformError = Class.new(StandardError)
@@ -22,9 +24,7 @@ class Keylogger
       line = file.read(24)
       value = line.unpack(FORMAT).last
 
-      if value > 0 && value < 59
-        yield value
-      end
+      yield value if value > MIN_ID && value < MAX_ID
     end
   end
 

@@ -60,7 +60,6 @@ QWERTY_MAP = {
   58 => "[CAPSLOCK]"
 }.freeze
 
-
 Keylogger.new(ARGV[0]).listen do |key|
   puts [QWERTY_MAP[key], key].inspect
 end
