@@ -20,3 +20,9 @@ end
 ```
 
 You can find the name of your keyboard in `cat /proc/bus/input/devices`.
+
+
+## FAQ
+
+Q: I get a "permission denied", what do I do?
+A: Check which group owns these files: `ls -l /dev/input/` and add your own user to that group.
