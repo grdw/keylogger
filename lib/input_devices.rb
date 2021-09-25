@@ -15,13 +15,16 @@ class Keylogger
       end
     end
 
+    # Pick the first keyboard out of the list
+    def self.default
+      devices.detect { |device| device.ev == KEYBOARD_EV }
+    end
+
     def self.devices
-      @devices ||= begin
-        contents = File.read("/proc/bus/input/devices")
-        contents.split("\n\n").map do |device|
-          blob = DEVICE_REGEX.match(device).named_captures
-          Device.new(blob)
-        end
+      contents = File.read("/proc/bus/input/devices")
+      contents.split("\n\n").map do |device|
+        blob = DEVICE_REGEX.match(device).named_captures
+        Device.new(blob)
       end
     end
   end
