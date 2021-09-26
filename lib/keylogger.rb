@@ -18,6 +18,6 @@ class Keylogger
   end
 
   def listen
-    InputDevices.device.listen(@device)
+    InputDevices.device.listen(@device) { |key| yield key }
   end
 end
