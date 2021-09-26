@@ -1,4 +1,3 @@
-require_relative "input_devices/linux"
 require_relative "input_devices/linux_x86"
 
 class Keylogger
