@@ -18,6 +18,6 @@ class Keylogger
   end
 
   def listen
-    @device.listen
+    InputDevices.device.listen(@device)
   end
 end
