@@ -22,4 +22,3 @@ include:
 
 script:
   - ruby -e "puts RUBY_PLATFORM"
-  - echo 'test'
