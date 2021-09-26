@@ -1,7 +1,5 @@
 # Keylogger
 
-[![CircleCI](https://circleci.com/gh/grdw/keylogger.svg?style=svg)](https://circleci.com/gh/grdw/keylogger)
-
 A simple keylogger for logging keyboard events. Only works on these Ruby platforms:
 
 ```
