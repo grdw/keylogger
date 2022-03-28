@@ -10,14 +10,19 @@ class Keylogger
             "platform #{RUBY_PLATFORM} not supported"
     end
 
-    @device =
-      InputDevices.device.find_by_name(name) ||
-      InputDevices.device.default
+    @input_device = InputDevices.device
 
-    raise DeviceNotFoundError unless @device
+    raise DeviceNotFoundError unless device
   end
 
   def listen
-    InputDevices.device.listen(@device) { |key| yield key }
+    @input_device.listen(device) { |key| yield key }
+  end
+
+  private
+
+  def device
+    @input_device.find_by_name(name) ||
+    @input_device.device.default
   end
 end

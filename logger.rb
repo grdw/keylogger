@@ -1,4 +1,4 @@
-require_relative "lib/main"
+require_relative "lib/keylogger"
 
 QWERTY_MAP = {
   2 => "1",
